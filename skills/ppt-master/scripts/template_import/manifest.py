@@ -248,6 +248,7 @@ def placeholder_semantic_role(placeholder_type: str | None) -> str:
         "subTitle": "subtitle",
         "obj": "object",
         "pic": "picture",
+        "clipArt": "clipart",
         "chart": "chart",
         "tbl": "table",
         "media": "media",

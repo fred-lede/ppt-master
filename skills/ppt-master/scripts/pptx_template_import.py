@@ -23,6 +23,7 @@ Reads OOXML directly via `pptx_to_svg` and writes a reusable reference workspace
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import shutil
 import tempfile
@@ -95,6 +96,19 @@ def _project_authoring_directory(
             staged_dir / f"{output_dir.name}_vector_asset_inventory.json"
         ),
         reuse_inventory_path=reuse_inventory_path,
+    )
+    authoring_manifest_path = authoring_root / "authoring_manifest.json"
+    authoring_manifest = json.loads(
+        authoring_manifest_path.read_text(encoding="utf-8")
+    )
+    for document in authoring_manifest.get("documents", []):
+        authoring_path = authoring_root / document["authoring"]
+        document["initial_authoring_sha256"] = hashlib.sha256(
+            authoring_path.read_bytes()
+        ).hexdigest()
+    authoring_manifest_path.write_text(
+        json.dumps(authoring_manifest, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
     )
     return len(reports)
 

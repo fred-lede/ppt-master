@@ -52,7 +52,7 @@ Every new SVG project declares one deterministic route:
 |---|---|---|
 | `title`, `subtitle`, `body` | one `<text data-pptx-carrier="true">` | `title`, `subTitle`, `body` |
 | `date`, `footer`, `slide-number` | one `<text data-pptx-carrier="true">` | `dt`, `ftr`, `sldNum` |
-| `picture`, `media` | one `<image>` or supported imported crop `<svg>`, marked as carrier | `pic`, `media` |
+| `picture`, `clipart`, `media` | one `<image>` or supported imported crop `<svg>`, marked as carrier | `pic`, `clipArt`, `media` |
 | `chart`, `table` | one matching `data-pptx-replace-with` marker group, marked as carrier; requires `--native-charts-and-tables` | `chart`, `tbl` |
 | `object` | one text, image, basic SVG shape, or validated compact authored-preset `<g>` marked as carrier; or the slot declares `binding="proxy"` | `obj` |
 

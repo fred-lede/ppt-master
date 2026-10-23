@@ -1,4 +1,10 @@
 {
+  "hh-os-light": {
+    "summary": "鴻海 OS Light 原始 PowerPoint 範本的 Mirror；保留 8 張來源投影片及其順序、來源主題與投影片實際使用的 Master/Layout 結構。",
+    "canvas_format": "ppt169",
+    "page_count": 8,
+    "primary_color": "#083C63"
+  },
   "中国电信": {
     "summary": "中国电信政企数字化方案、转型规划与内部评审，用于说明方案并对齐决策和下一步；采用克制的红灰品牌视觉。",
     "canvas_format": "ppt169",

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+  width="1280" height="720" viewBox="0 0 1280 720"
+  data-pptx-master="lightgray-blackgold_dark_master" data-pptx-master-name="純淨淺灰+黑金 Dark"
+  data-pptx-layout="closing" data-pptx-layout-name="Closing">
+  <rect id="dark-master-background" x="0" y="0" width="1280" height="720" fill="#000000"
+    data-pptx-layer="master" data-pptx-editable="false"/>
+  <rect id="dark-master-top-rule" x="0" y="0" width="1280" height="4" fill="#FFFFFF" fill-opacity="0.35"
+    data-pptx-layer="master" data-pptx-editable="false"/>
+  <rect id="dark-master-bottom-rule" x="0" y="716" width="1280" height="4" fill="#FFFFFF" fill-opacity="0.35"
+    data-pptx-layer="master" data-pptx-editable="false"/>
+  <circle id="closing-circle-left" cx="100" cy="100" r="200" fill="#FFFFFF" fill-opacity="0.03"
+    data-pptx-layer="layout" data-pptx-editable="false"/>
+  <circle id="closing-circle-right" cx="1200" cy="600" r="300" fill="#FFFFFF" fill-opacity="0.03"
+    data-pptx-layer="layout" data-pptx-editable="false"/>
+  <circle id="closing-circle-center" cx="640" cy="360" r="400" fill="#FFFFFF" fill-opacity="0.02"
+    data-pptx-layer="layout" data-pptx-editable="false"/>
+  <line id="closing-separator" x1="540" y1="520" x2="740" y2="520" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1"
+    data-pptx-layer="layout" data-pptx-editable="false"/>
+  <rect id="closing-footer-band" x="0" y="680" width="1280" height="40" fill="#FFFFFF" fill-opacity="0.1"
+    data-pptx-layer="layout" data-pptx-editable="false"/>
+  <g id="closing-title-slot" data-pptx-placeholder="title"
+    data-pptx-bounds="220 356 840 92">
+    <text id="closing-title-slot-carrier" data-pptx-carrier="true"
+      x="640" y="416" text-anchor="middle" fill="#FFFFFF"
+      font-family="Microsoft YaHei, SimHei, Arial, sans-serif" font-size="56" font-weight="700">{{THANK_YOU}}</text>
+  </g>
+  <g id="closing-subtitle-slot" data-pptx-placeholder="subtitle" data-pptx-idx="1"
+    data-pptx-bounds="260 452 760 50">
+    <text id="closing-subtitle-slot-carrier" data-pptx-carrier="true"
+      x="640" y="486" text-anchor="middle" fill="#FFFFFF"
+      font-family="Microsoft YaHei, Arial, sans-serif" font-size="24">{{THANK_YOU_EN}}</text>
+  </g>
+  <g id="closing-contact-slot" data-pptx-placeholder="body" data-pptx-idx="2"
+    data-pptx-bounds="300 548 680 44">
+    <text id="closing-contact-slot-carrier" data-pptx-carrier="true"
+      x="640" y="578" text-anchor="middle" fill="#FFFFFF"
+      font-family="Microsoft YaHei, Arial, sans-serif" font-size="18">{{CONTACT_INFO}}</text>
+  </g>
+  <g id="closing-footer-slot" data-pptx-placeholder="footer" data-pptx-idx="3"
+    data-pptx-bounds="240 686 800 28">
+    <text id="closing-footer-slot-carrier" data-pptx-carrier="true"
+      x="640" y="706" text-anchor="middle" fill="#FFFFFF"
+      font-family="Microsoft YaHei, Arial, sans-serif" font-size="14">{{ENDING_SUBTITLE}}</text>
+  </g>
+</svg>

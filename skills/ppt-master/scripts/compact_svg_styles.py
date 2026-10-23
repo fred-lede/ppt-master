@@ -361,6 +361,8 @@ def _promote_common_group_defaults(
         _promote_common_group_defaults(child, stats)
     if _local_name(element.tag) != "g":
         return
+    if element.get("data-pptx-placeholder") is not None:
+        return
 
     children = [
         child for child in element

@@ -177,6 +177,7 @@ def _valid_emf_payload(data: bytes) -> bool:
     count = 0
     last_type = 0
     last_size = 0
+    valid_empty_eof = False
     while offset < total_size:
         if offset + 8 > total_size:
             return False
@@ -190,7 +191,17 @@ def _valid_emf_payload(data: bytes) -> bool:
         if count > 0 and record_type == 1:
             return False
         if record_type == 14:
-            if (
+            short_empty_eof = (
+                record_size == 16
+                and header_palette_entries == 0
+                and _little_uint(data, offset + 8, 4) == 0
+                and _little_uint(data, offset + 12, 4) == 0
+            )
+            valid_empty_eof = short_empty_eof
+            if short_empty_eof:
+                if record_end != total_size:
+                    return False
+            elif (
                 record_size < 20
                 or record_end != total_size
                 or _little_uint(data, record_end - 4, 4) != record_size
@@ -217,7 +228,7 @@ def _valid_emf_payload(data: bytes) -> bool:
         # spelling while keeping the complete stream bounded.
         and count in {record_count, record_count + 1}
         and last_type == 14
-        and last_size >= 20
+        and (last_size >= 20 or valid_empty_eof)
     )
 
 

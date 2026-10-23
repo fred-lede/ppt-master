@@ -1701,6 +1701,7 @@ def _semantic_role(placeholder: dict[str, Any]) -> str:
         "ftr": "footer",
         "sldNum": "slide-number",
         "pic": "picture",
+        "clipArt": "clipart",
         "chart": "chart",
         "tbl": "table",
         "media": "media",
@@ -1712,6 +1713,7 @@ def _semantic_role(placeholder: dict[str, Any]) -> str:
         "subtitle",
         "body",
         "picture",
+        "clipart",
         "chart",
         "table",
         "object",
@@ -2277,6 +2279,7 @@ def _slot_wrapper(
 
     expected_tags = {
         "picture": {"image", "svg"},
+        "clipart": {"image", "svg"},
         "media": {"image", "svg"},
         "chart": {"g"},
         "table": {"g"},
@@ -2291,7 +2294,7 @@ def _slot_wrapper(
         not candidates
         and source is None
         and layout_guide is not None
-        and plan.semantic_role in {"picture", "media"}
+        and plan.semantic_role in {"picture", "clipart", "media"}
     ):
         wrapper.append(_blank_image_carrier(plan))
         return wrapper, extras
@@ -3156,6 +3159,19 @@ def materialize_mirror_template(
         )
         compact_svg_tree(root, compact_native_frames=False)
         compact_svg_style_tree(root)
+        for element in root.iter():
+            if (
+                element is not root
+                and _local_name(element.tag) == "svg"
+                and all(_local_name(child.tag) == "image" for child in element)
+            ):
+                element.attrib.pop("font-family", None)
+                style = _parse_style(element.get("style"))
+                style.pop("font-family", None)
+                if style:
+                    element.set("style", _style_text(style))
+                else:
+                    element.attrib.pop("style", None)
         # Compaction may hoist a Slide-specific font to the shared SVG root.
         # Localize it again so Master/Layout resources have stable inheritance.
         parents = {child: parent for parent in root.iter() for child in parent}

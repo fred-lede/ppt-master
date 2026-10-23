@@ -79,6 +79,7 @@ _PLACEHOLDERS = frozenset({
     "subtitle",
     "body",
     "picture",
+    "clipart",
     "chart",
     "table",
     "object",
@@ -92,6 +93,7 @@ TEMPLATE_PLACEHOLDER_TYPES = {
     "subtitle": "subTitle",
     "body": "body",
     "picture": "pic",
+    "clipart": "clipArt",
     "chart": "chart",
     "table": "tbl",
     "object": "obj",
@@ -1451,9 +1453,9 @@ def _validate_placeholder_carrier(
         tag in {"image", "svg"}
         or (tag == "g" and is_picture_effect_carrier(carrier))
     )
-    if placeholder == "picture" and not picture_carrier:
+    if placeholder in {"picture", "clipart"} and not picture_carrier:
         raise TemplateStructureError(
-            f"{svg_path.name}: {element_id} picture placeholder must be declared "
+            f"{svg_path.name}: {element_id} {placeholder} placeholder must be declared "
             "with one direct <image>, crop <svg>, or exact clipped-picture "
             "effect carrier"
         )
@@ -3558,6 +3560,7 @@ _PRESERVE_PLACEHOLDER_TYPE_ORDER = {
     "subtitle": ("subTitle", "body", "obj"),
     "body": ("body", "obj", "subTitle"),
     "picture": ("pic", "obj"),
+    "clipart": ("clipArt",),
     "chart": ("chart", "obj"),
     "table": ("tbl", "obj"),
     "object": ("obj",),
