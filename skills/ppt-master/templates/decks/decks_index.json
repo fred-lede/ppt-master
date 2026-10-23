@@ -1,9 +1,51 @@
 {
+  "beige-copper": {
+    "summary": "消费、零售与商业模式分析，用于呈现质感、细节与市场洞察；采用纸米色与铜棕风格。",
+    "canvas_format": "ppt169",
+    "page_count": 5,
+    "primary_color": "#9A5A2E"
+  },
+  "consulting-deepred": {
+    "summary": "战略、行业研究与商业计划汇报，用于以权威清晰的方式呈现分析并推进决策；采用经典深红咨询风格。",
+    "canvas_format": "ppt169",
+    "page_count": 5,
+    "primary_color": "#8B1E1E"
+  },
+  "coolgray-burgundy": {
+    "summary": "财务、投研与风险分析汇报，用于冷静呈现经营分析与投资建议并支持讨论；采用冷灰与勃艮第红风格。",
+    "canvas_format": "ppt169",
+    "page_count": 5,
+    "primary_color": "#7A1F2B"
+  },
   "hh-os-light": {
     "summary": "鴻海 OS Light 原始 PowerPoint 範本的 Mirror；保留 8 張來源投影片及其順序、來源主題與投影片實際使用的 Master/Layout 結構。",
     "canvas_format": "ppt169",
     "page_count": 8,
     "primary_color": "#083C63"
+  },
+  "ivory-navy": {
+    "summary": "科技、B2B、企业数字化与 AI Agent 报告，用于建立专业可信的论述并推动评审；采用象牙白与深蓝强调风格。",
+    "canvas_format": "ppt169",
+    "page_count": 5,
+    "primary_color": "#12355B"
+  },
+  "ivory-wine": {
+    "summary": "品牌战略与消费品研究汇报，用于营造温暖庄重氛围并传递品牌判断；采用象牙白与暗酒红风格。",
+    "canvas_format": "ppt169",
+    "page_count": 5,
+    "primary_color": "#8A1538"
+  },
+  "lightgray-blackgold": {
+    "summary": "高管汇报、融资材料与董事会材料，用于营造精致高级的展示氛围；采用浅灰与黑金风格。",
+    "canvas_format": "ppt169",
+    "page_count": 5,
+    "primary_color": "#000000"
+  },
+  "lightgray-forest": {
+    "summary": "可持续、海外市场与增长战略汇报，用于以自然克制的方式呈现事实与流程；采用浅灰白与墨绿风格。",
+    "canvas_format": "ppt169",
+    "page_count": 5,
+    "primary_color": "#1F5B4D"
   },
   "中国电信": {
     "summary": "中国电信政企数字化方案、转型规划与内部评审，用于说明方案并对齐决策和下一步；采用克制的红灰品牌视觉。",
@@ -16,5 +58,11 @@
     "canvas_format": "ppt169",
     "page_count": 5,
     "primary_color": "#004098"
+  },
+  "whitegray-purple": {
+    "summary": "AI、技术趋势与产品战略汇报，用于呈现前瞻性与技术深度；采用冷白灰与深紫风格。",
+    "canvas_format": "ppt169",
+    "page_count": 5,
+    "primary_color": "#4B2E83"
   }
 }
