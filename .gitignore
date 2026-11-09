@@ -179,6 +179,9 @@ yarn.lock
 TODO.md
 PERSONAL_NOTES.md
 
+# Agent working artifacts (local plans/specs; not part of this workflow)
+docs/superpowers/
+
 # Projects directory - Work-in-progress projects (not version controlled)
 # Completed projects are published through the separate examples repository
 # Use cloud sync (iCloud/Dropbox) for backup and multi-device access
