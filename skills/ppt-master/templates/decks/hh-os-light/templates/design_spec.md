@@ -19,7 +19,7 @@ page_count: 8
 
 ## I. Template Overview
 
-此範本以 `projects/HH_Template_OS_Light.pptx` 為唯一原稿，保留 8 張投影片的頁面順序、畫面內容、來源 Master、Layout、placeholder 身分與匯入後可承載的原生屬性。用途、受眾與交付情境未由原稿明確限定；套用時依當前簡報材料決定。
+此範本以 `HH(OS)_2026_light+mode+3.pptx` 為視覺原稿，保留 8 張投影片的頁面順序、來源 Master、Layout 與 placeholder 身分。匯入用的 `HH-OS-Light-template-source-fixed.pptx` 僅移除 layout 7、12 不應在放映時顯示的母片提示，將 Wingdings 方塊項目符號換成等效的 Unicode 方塊，並固定第 5 頁兩處自動換行；用途、受眾與交付情境仍依當前簡報材料決定。
 
 Mirror 僅發布原始投影片引用的結構：本範本保留 1 個 Master 與 6 個 Layout。來源另有 7 個未被這 8 張投影片引用的 Layout，因此不在 Mirror 發布名冊中；若需使用這些版型，應以來源檔另行建立涵蓋未使用 Layout 的 fidelity 範本。
 
@@ -67,7 +67,9 @@ Slots `none` means the source package declared no PowerPoint placeholder; editab
 
 ### Source Preservation Map
 
-Source package SHA-256: `08d66df08c9f7010e51caa2491ebf9020f0eae7d1e4cfba49c3047b16a13ad18`
+Template import source SHA-256: `ec4dd170f9609b2022e1b6593ceab13489312b4b1db808dfa8d018f22499abfe`
+
+Original attachment SHA-256: `08d66df08c9f7010e51caa2491ebf9020f0eae7d1e4cfba49c3047b16a13ad18`
 
 | Source slide | Template | Master | Layout |
 | --- | --- | --- | --- |
@@ -84,4 +86,4 @@ Only source-slide-reachable Masters and Layouts are retained. The seven omitted 
 
 ## VI. Assets
 
-隨範本封裝的圖片與向量資產均由原稿匯入，不另行補圖或改繪。來源匯入報告記錄 14 項 recovery warnings；查看 `projects/HH_Template_OS_Light.pptx` 的原始檔作為精確視覺基準，尤其注意匯入器無法完整重建的線條斜接、外陰影屬性與轉場資訊。Mirror 不保證這些資訊在 SVG/PPTX 預覽中與 PowerPoint 原稿完全一致。
+隨範本封裝的圖片與向量資產均由原稿匯入，不另行補圖或改繪。來源匯入報告記錄 14 項 recovery warnings；查看 `HH(OS)_2026_light+mode+3.pptx` 的原始檔作為精確視覺基準，尤其注意匯入器無法完整重建的線條斜接、外陰影屬性與轉場資訊。Mirror 不保證這些資訊在 SVG/PPTX 預覽中與 PowerPoint 原稿完全一致。
